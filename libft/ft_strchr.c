@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faozturk <faozturk@42kocaeli.com>          +#+  +:+       +#+        */
+/*   By: faozturk <faozturk@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 14:08:03 by faozturk          #+#    #+#             */
-/*   Updated: 2022/02/09 17:23:33 by faozturk         ###   ########.tr       */
+/*   Updated: 2023/02/04 12:06:06 by faozturk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	if (!s)
+		return (0);
 	while (*s != '\0' && c != *s)
 		s++;
 	if (c == *s)
 		return ((char *)s);
 	return (0);
 }
+
